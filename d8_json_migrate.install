@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file Contains codes for d8_json_migrate.install
+ */
+use \Drupal\migrate\Entity\Migration;
+/**
+ * Implements hook_uninstall().
+ */
+function d8_json_migrate_uninstall(){
+    /** @var \Drupal\migrate\Entity\MigrationInterface $migration */
+    foreach(["gmap_type", "gmap"] as $id_migration ){
+        if ($migration = Migration::load($id_migration)) {
+            $migration->getIdMap()->destroy();
+            $migration->delete();
+        }
+    }
+}

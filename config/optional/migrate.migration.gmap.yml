@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - migrate_source_json
+    - node
+_core:
+  default_config_hash: ispsPTJY5RInKJ7mv5tvhblT57X3GJLPvYEbJM5AJDc
+id: gmap
+migration_tags: JSON
+label: gmap
+source:
+  plugin: json_source
+  path: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452'
+  headers:
+    Accept: application/json
+  identifier: place_id
+  identifierDepth: 1
+  readerClass: Drupal\d8_json_migrate\Plugin\migrate\GmapJSONReader
+  fields:
+    - place_id
+    - types
+    - street_address
+    - postal_code
+    - country
+    - locality
+    - administrative_area_level_1
+process:
+  type:
+    plugin: default_value
+    default_value: gmaps
+  title: country
+  field_address_type:
+    plugin: migration
+    migration: gmap_type
+    source: types
+  field_city: locality
+  field_country: country
+  field_postal_code: postal_code
+  field_state: administrative_area_level_1
+  field_street_address: street_address
+destination:
+  plugin: 'entity:node'
+template: null
+migration_dependencies: {  }
+migration_group: JSON

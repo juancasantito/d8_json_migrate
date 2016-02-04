@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - migrate_source_json
+    - taxonomy
+_core:
+  default_config_hash: OH2wxj2KilOSw2nYbuAF5oTbqC4CxUYuF52qZn4Hzbk
+id: gmap_type
+migration_tags: JSON
+label: 'gmap type'
+source:
+  plugin: json_source
+  path: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452'
+  headers:
+    Accept: application/json
+  identifier: place_id
+  identifierDepth: 1
+  readerClass: Drupal\d8_json_migrate\Plugin\migrate\GmapTypeJSONReader
+  fields:
+    - type
+process:
+  name: type
+  vid:
+    plugin: default_value
+    default_value: address_type
+destination:
+  plugin: 'entity:taxonomy_term'
+template: null
+migration_dependencies: {  }
+migration_group: JSON

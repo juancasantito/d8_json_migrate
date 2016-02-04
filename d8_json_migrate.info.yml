@@ -1,0 +1,16 @@
+name: 'D8 Json Migrate'
+type: module
+description: 'drupal json migrate example'
+core: 8.x
+package: migrate
+dependencies:
+  - d8_json_migrate
+  - field
+  - menu_ui
+  - migrate
+  - migrate_source_json
+  - node
+  - path
+  - taxonomy
+  - text
+  - user

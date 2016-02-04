@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gmaps.body
+    - field.field.node.gmaps.field_address_type
+    - field.field.node.gmaps.field_city
+    - field.field.node.gmaps.field_country
+    - field.field.node.gmaps.field_postal_code
+    - field.field.node.gmaps.field_state
+    - field.field.node.gmaps.field_street_address
+    - node.type.gmaps
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: VK81Z6UiNr1Ds5xdfSAkbdsKI7ZHU1zS9RX55A3IcMM
+id: node.gmaps.default
+targetEntityType: node
+bundle: gmaps
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  field_address_type:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_city:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_country:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_postal_code:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_state:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_street_address:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gmaps.body
+    - field.field.node.gmaps.field_address_type
+    - field.field.node.gmaps.field_city
+    - field.field.node.gmaps.field_country
+    - field.field.node.gmaps.field_postal_code
+    - field.field.node.gmaps.field_state
+    - field.field.node.gmaps.field_street_address
+    - node.type.gmaps
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: YPYnFhGm1T5GlBIIbaZV3GmSZKJG5qS4Bw5CTd3Kcr4
+id: node.gmaps.teaser
+targetEntityType: node
+bundle: gmaps
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_address_type: true
+  field_city: true
+  field_country: true
+  field_postal_code: true
+  field_state: true
+  field_street_address: true

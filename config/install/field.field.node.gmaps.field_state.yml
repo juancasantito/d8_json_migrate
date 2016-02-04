@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.gmaps
+_core:
+  default_config_hash: ZafvgeAXUDn36fmFRX29zLtp6VsTtEURHyFzEYiKENA
+id: node.gmaps.field_state
+field_name: field_state
+entity_type: node
+bundle: gmaps
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

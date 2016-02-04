@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_street_address
+    - node.type.gmaps
+_core:
+  default_config_hash: aK3_MO2yCvlV5j9K_NHzCN-BbgIZKXEpcdQLbsHRFmI
+id: node.gmaps.field_street_address
+field_name: field_street_address
+entity_type: node
+bundle: gmaps
+label: 'Street Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

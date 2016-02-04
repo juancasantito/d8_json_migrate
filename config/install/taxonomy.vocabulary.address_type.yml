@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tgZ-BCXdB8WoQ5yfMk15gM2uoGXwMytND7-8OBXVatc
+name: 'Address Type'
+vid: address_type
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,15 @@
+required:
+  - node.type.gmaps
+  - core.entity_form_display.node.gmaps.default
+  - core.entity_view_display.node.gmaps.default
+  - core.entity_view_display.node.gmaps.teaser
+  - field.field.node.gmaps.body
+  - field.field.node.gmaps.field_address_type
+  - field.field.node.gmaps.field_city
+  - field.field.node.gmaps.field_country
+  - field.field.node.gmaps.field_postal_code
+  - field.field.node.gmaps.field_state
+  - field.field.node.gmaps.field_street_address
+  - taxonomy.vocabulary.address_type
+  - migrate.migration.gmap
+  - migrate.migration.gmap_type

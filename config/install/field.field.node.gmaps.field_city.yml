@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_city
+    - node.type.gmaps
+_core:
+  default_config_hash: 43W9HnPTv7G996fjOukzDjgoTe5-pwp8zRtefz1iano
+id: node.gmaps.field_city
+field_name: field_city
+entity_type: node
+bundle: gmaps
+label: City
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
