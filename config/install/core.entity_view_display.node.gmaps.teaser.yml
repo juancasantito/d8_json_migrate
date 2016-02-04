@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.gmaps.body
     - field.field.node.gmaps.field_address_type
     - field.field.node.gmaps.field_city
     - field.field.node.gmaps.field_country
@@ -21,15 +20,6 @@ targetEntityType: node
 bundle: gmaps
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-  links:
-    weight: 100
 hidden:
   field_address_type: true
   field_city: true

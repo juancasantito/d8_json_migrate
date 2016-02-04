@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.gmaps.body
     - field.field.node.gmaps.field_address_type
     - field.field.node.gmaps.field_city
     - field.field.node.gmaps.field_country
@@ -20,12 +19,6 @@ targetEntityType: node
 bundle: gmaps
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
   field_address_type:
     weight: 107
     label: above
