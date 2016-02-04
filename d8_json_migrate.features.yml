@@ -12,3 +12,9 @@ required:
   - taxonomy.vocabulary.address_type
   - migrate.migration.gmap
   - migrate.migration.gmap_type
+  - field.storage.node.field_address_type
+  - field.storage.node.field_city
+  - field.storage.node.field_country
+  - field.storage.node.field_postal_code
+  - field.storage.node.field_state
+  - field.storage.node.field_street_address
